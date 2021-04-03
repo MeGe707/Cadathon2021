@@ -29,13 +29,13 @@ public class elevatorSubsystem extends SubsystemBase {
 
 
 
-    private static drivetrainSubsystem INSTANCE = new drivetrainSubsystem();
+    private static elevatorSubsystem INSTANCE = new elevatorSubsystem();
 
-    public static drivetrainSubsystem getInstance() {
+    public static elevatorSubsystem getInstance() {
       if (INSTANCE == null){
-          synchronized (drivetrainSubsystem.class) {
+          synchronized (elevatorSubsystem.class) {
               if (INSTANCE == null){
-                  INSTANCE = new drivetrainSubsystem();
+                  INSTANCE = new elevatorSubsystem();
               }
           }
       }
@@ -48,7 +48,7 @@ public class elevatorSubsystem extends SubsystemBase {
       //Encoder Distance Methods
     public void encoder_distance(){
         elevator_encoder.setDistancePerPulse();
-        elevator_encoder.getDistance();
+        return elevator_encoder.getDistance();
 
     }
 
