@@ -46,7 +46,7 @@ public class elevatorSubsystem extends SubsystemBase {
     //ENCODER METHODS
 
       //Encoder Distance Methods
-    public void encoder_distance(){
+    public double encoder_distance(){
         elevator_encoder.setDistancePerPulse();
         return elevator_encoder.getDistance();
 
