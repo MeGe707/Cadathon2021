@@ -34,6 +34,7 @@ public final class Constants {
         public static final int driveEncoder3  = 2;
         public static final int driveEncoder4  = 3;
         public static final int driveGyro      = 4;
+        public static final int elevator_encoder  = 5;
     
     }
 

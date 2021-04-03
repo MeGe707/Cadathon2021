@@ -26,7 +26,7 @@ public class drivetrainSubsystem extends SubsystemBase {
 
     private final Encoder leftEncoder  = new Encoder(Constants.RoboRIOAnalogPorts.driveEncoder1, Constants.RoboRIOAnalogPorts.driveEncoder2);
     private final Encoder rightEncoder = new Encoder(Constants.RoboRIOAnalogPorts.driveEncoder3, Constants.RoboRIOAnalogPorts.driveEncoder4);
-
+    
     private final AnalogGyro gyro = new AnalogGyro(Constants.RoboRIOAnalogPorts.driveGyro);
 
 
