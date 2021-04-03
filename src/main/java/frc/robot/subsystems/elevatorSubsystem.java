@@ -18,6 +18,19 @@ public class elevatorSubsystem extends SubsystemBase {
     public static boolean is_elevator_open = false;
     public static boolean is_elevator_up   = false; 
 
+    private static drivetrainSubsystem INSTANCE = new drivetrainSubsystem();
+
+    public static drivetrainSubsystem getInstance() {
+      if (INSTANCE == null){
+          synchronized (drivetrainSubsystem.class) {
+              if (INSTANCE == null){
+                  INSTANCE = new drivetrainSubsystem();
+              }
+          }
+      }
+      return INSTANCE;
+  }
+
     public void elevator_motors_open_close(double speed){
         elevator_motors.set(speed);
     }
