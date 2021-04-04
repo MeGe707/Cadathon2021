@@ -39,8 +39,11 @@ public final class Constants {
     }
 
     public final class RobotFeatures{
-        public static final double wheelRadius = 0;
-        public static final int encoderPPR = 0;
+        public static final double wheelRadius                    = 0;
+        public static final int encoderPPR                        = 0;
+        public static final double elevator_encoder_raise_PerTour = 0;
+        public static final double elevator_encoder_drop_PerTour  = 0;
+
         
     }
 

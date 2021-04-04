@@ -46,8 +46,14 @@ public class elevatorSubsystem extends SubsystemBase {
     //ENCODER METHODS
 
       //Encoder Distance Methods
-    public double encoder_distance(){
-        elevator_encoder.setDistancePerPulse();
+    public double encoder_drop_distance(){
+        elevator_encoder.setDistancePerPulse(Constants.RobotFeatures.elevator_encoder_drop_PerTour/Constants.RobotFeatures.encoderPPR);
+        return elevator_encoder.getDistance();
+
+    }
+
+    public double encoder_raise_distance(){
+        elevator_encoder.setDistancePerPulse(Constants.RobotFeatures.elevator_encoder_raise_PerTour/Constants.RobotFeatures.encoderPPR);
         return elevator_encoder.getDistance();
 
     }
